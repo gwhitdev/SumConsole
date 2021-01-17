@@ -5,16 +5,18 @@ namespace SumConsole
     
     class Program
     {
+        public static int Target { get; set; } = 8;
+        public static Sum Maths { get; set; } = new Sum();
+        
         static void Main(string[] args)
         {
-            int target = 8;
-            Sum maths = new Sum();
             var myData = new[]
             {
                 new Data().MakeData(),
                 new Data().MakeData(),
                 new Data().MakeData(),
             };
+
             foreach(var data in myData)
             {
                 Console.Write("[");
@@ -23,7 +25,7 @@ namespace SumConsole
                     Console.Write($"{num}, ");
                 }
                 Console.Write("]");
-                Console.WriteLine(maths.GetPairForSum(data, target));
+                Console.WriteLine(Maths.GetPairForSum(data, Target));
                 Console.ReadLine();
             }
         }
