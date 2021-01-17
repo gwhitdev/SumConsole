@@ -5,13 +5,13 @@ namespace SumConsole
 {
     class Data
     {
-        public List<int> ListOfData { get; set; }  = new List<int>();
-        public Random random { get; set; }  = new Random();
+        public static List<int> ListOfData { get; set; }  = new List<int>();
+        public static Random Random { get; set; }  = new Random();
         public List<int> MakeData()
         {
-            while (ListOfData.Count < 10000)
+            while (ListOfData.Count < 10)
             {
-                int randomNumber = random.Next(1, 100);
+                int randomNumber = Random.Next(1, 10);
                 ListOfData.Add(randomNumber);
             };
             return ListOfData;

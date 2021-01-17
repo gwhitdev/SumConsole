@@ -5,9 +5,9 @@ namespace SumConsole
 {
     class Sum
     {
-        public int X { get; set; } = 0;
-        public int Y { get; set; } = 0;
-        public List<int> Comp { get; set; } = new List<int>();
+        public static int X { get; set; } = 0;
+        public static int Y { get; set; } = 0;
+        public static List<int> Comp { get; set; } = new List<int>();
         public bool GetPairForSum(List<int> data, int target) // returns True if there is a pair that sums to the target, else returns False
         {
             foreach (var num in data)
