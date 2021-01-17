@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
-using System.Collections;
 using System;
-using System.Linq;
 
 namespace SumConsole
 {
@@ -18,7 +16,7 @@ namespace SumConsole
                 {
                     X = Comp[^1];
                     Y = num;
-                    Console.WriteLine($"[{8-X},{Y}]");
+                    Console.WriteLine($"[{target-X},{Y}]");
                     return true;
                 }
                 Comp.Add((target - num));
