@@ -15,14 +15,12 @@ namespace SumConsole
                 new Data().MakeData(),
                 new Data().MakeData(),
             };
-            var count = 0;
             foreach(var data in myData)
             {
                 Console.Write("[");
                 foreach(var num in data)
                 {
                     Console.Write($"{num}, ");
-                    count++;
                 }
                 Console.Write("]");
                 Console.WriteLine(maths.GetPairForSum(data, target));
